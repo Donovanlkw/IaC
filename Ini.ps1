@@ -7,3 +7,8 @@ winrm get winrm/config/Winrs
 
 winrs -r:http://192.168.1.123:5985/wsman -u:administrator -p:Password1 ipconfig
 winrs -r:https://192.168.1.123:5985/wsman -u:administrator -p:Password1 ipconfig
+
+
+
+https://learn.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/configure-winrm-for-https
+
