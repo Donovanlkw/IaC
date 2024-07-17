@@ -12,3 +12,13 @@ winrs -r:https://192.168.1.123:5985/wsman -u:administrator -p:Password1 ipconfig
 
 https://learn.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/configure-winrm-for-https
 
+
+Hosts in Linux
+
+ansible_user: user@DOMAIN.COM
+ansible_password: password
+ansible_connection: winrm
+ansible_ssh_port: 5986
+ansible_winrm_transport: ntlm
+ansible_winrm_server_cert_validation: ignore
+
