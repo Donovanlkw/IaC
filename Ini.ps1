@@ -22,3 +22,8 @@ ansible_ssh_port: 5986
 ansible_winrm_transport: ntlm
 ansible_winrm_server_cert_validation: ignore
 
+
+#https://docs.ansible.com/ansible/latest/collections/community/windows/index.html
+
+
+
