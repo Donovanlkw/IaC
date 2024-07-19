@@ -1,3 +1,6 @@
+# simple yml to call a powershell locally, 
+# get the return value and fit
+
 ---
 - name: Powershell
   hosts: win
@@ -5,14 +8,67 @@
   - name: ps 
     ansible.windows.win_powershell:
     script: |
-      echo "hello world"
-    register: output
+      get-service
+      register: ps_output
     
   - name: print the output
     debug: 
-      msg: "this is {{whoami_output.stdout}}"
+      msg: "this is {{ps_output.output}}"
+
+  - name: print the output
+    debug: 
+      msg: "this is {{ps_output.output}}"
       
 https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_file_module.html
 
 
+# feed the output into another logic. 
 
+win_command module – Executes a command on a remote Windows node
+win_powershell module – Run PowerShell scripts
+win_shell module – Execute shell commands on target hosts
+
+
+setup module – Gathers facts about remote hosts
+win_certificate_store module – Manages the certificate store
+win_copy module – Copies files to remote locations on windows hosts
+win_dns_client module – Configures DNS lookup on Windows hosts
+win_dsc module – Invokes a PowerShell DSC configuration
+win_environment module – Modify environment variables on windows hosts
+win_reg_stat module – Get information about Windows registry keys
+win_service_info module – Gather information about Windows services
+
+win_wait_for module – Waits for a condition before continuing
+
+
+
+win_feature module – Installs and uninstalls Windows Features on Windows Server
+win_group module – Add and remove local groups
+win_group_membership module – Manage Windows local group membership
+win_hostname module – Manages local Windows computer name
+win_optional_feature module – Manage optional Windows features
+win_user module – Manages local Windows user accounts
+
+win_path module – Manage Windows path environment variables
+
+
+win_reboot module – Reboot a windows machine
+win_regedit module – Add, change, or remove registry keys and values
+win_service module – Manage and query Windows services
+
+
+win_file module – Creates, touches or removes files or directories
+win_find module – Return a list of files based on specific criteria
+win_get_url module – Downloads file from HTTP, HTTPS, or FTP to node
+win_package module – Installs/uninstalls an installable package
+win_ping module – A windows version of the classic ping module
+
+win_share module – Manage Windows shares
+
+win_stat module – Get information about Windows files
+win_tempfile module – Creates temporary files and directories
+win_template module – Template a file out to a remote server
+win_updates module – Download and install Windows updates
+win_uri module – Interacts with webservices
+win_user_right module – Manage Windows User Rights
+win_whoami module – Get information about the current user and process
