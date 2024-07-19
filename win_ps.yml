@@ -7,6 +7,12 @@
     script: |
       echo "hello world"
     register: output
+    
+  - name: print the output
+    debug: 
+      msg: "this is {{whoami_output.stdout}}"
+      
+https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_file_module.html
 
 
 
