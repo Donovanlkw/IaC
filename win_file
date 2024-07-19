@@ -5,3 +5,6 @@
      win_file:
        path: c:\tmp\test.txt
        state: touch
+
+
+https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_file_module.html
