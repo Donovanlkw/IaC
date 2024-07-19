@@ -2,7 +2,7 @@
 ---
 - hosts: win 
   tasks: 
-   - name: Stop service Tomcat
+   - name: Stop IIS Service
      win_service:
-       name: Tomcat8
+       name: iisadmin
        state: stopped
