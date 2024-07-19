@@ -1,0 +1,7 @@
+---
+- hosts: win 
+  tasks: 
+   - name: create a file 
+     win_file:
+       path: c:\tmp\test.txt
+       state: touch
