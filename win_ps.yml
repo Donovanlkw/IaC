@@ -1,0 +1,12 @@
+---
+- name: Powershell
+  hosts: win
+  tasks:
+  - name: ps 
+    ansible.windows.win_powershell:
+    script: |
+      echo "hello world"
+    register: output
+
+
+
