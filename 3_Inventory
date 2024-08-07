@@ -1,0 +1,4 @@
+web ansible_host=server1.company.com ansible_connection=ssh ansible_users=root
+iis1 ansible_host=server1.company.com ansible_connection=winrm ansible_users=admin
+
+localhost ansbile_connection=localhost
