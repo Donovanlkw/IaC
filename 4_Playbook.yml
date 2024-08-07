@@ -12,12 +12,18 @@
       remote_src: yes
       line: 'nameserver {{dns_server}}'
       port: '{{htt_port}}'
+      register: result
+    - debug:
+        var: result
+        
       
 # the command run with parameter
 > Web http_port=1234
 
 # jinja2 templating.
+# -v is another way to display the output.
 
 
+# variable precedence. 
+(Extra vars(cmd)) > Set Facts > include Vars > Role Vars > (Play) > (Host) > ( Group Vars) > Role Default.
 
-# variable
