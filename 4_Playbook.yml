@@ -1,0 +1,23 @@
+---
+-
+  name: this is a testing sample script
+  hosts: win
+  var:
+    dns_server: 1.1.1.1
+  tasks:
+  - name: Copy File
+    win_copy:
+      src: C:\output.pdf
+      dest: C:\ansible_examples\
+      remote_src: yes
+      line: 'nameserver {{dns_server}}'
+      port: '{{htt_port}}'
+      
+# the command run with parameter
+> Web http_port=1234
+
+# jinja2 templating.
+
+
+
+# variable
