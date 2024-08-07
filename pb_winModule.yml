@@ -1,0 +1,23 @@
+# https://geekflare.com/ansible-playbook-windows-example/
+---
+- 
+  name: Play 1
+  hosts: win 
+  tasks: 
+   - name: Stop IIS Service
+     win_service:
+       name: iisadmin
+       state: stopped
+    
+- 
+  name: Play 2
+  hosts: win 
+  tasks:      
+   - name: execue command 'date'
+     command: date
+     
+   - name: execue script on the server
+     script: test_script.sh
+
+#for check the basic command of ansible.
+#ansible-doc -l

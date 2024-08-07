@@ -1,8 +1,0 @@
-# https://geekflare.com/ansible-playbook-windows-example/
----
-- hosts: win 
-  tasks: 
-   - name: Stop IIS Service
-     win_service:
-       name: iisadmin
-       state: stopped
