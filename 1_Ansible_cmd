@@ -1,0 +1,6 @@
+ansible-config list
+ansible-config view
+ansible-config dump
+
+export ANSIBLE_GATHERING =explicit
+ansible-config dump
