@@ -11,10 +11,13 @@
       dest: C:\ansible_examples\
       remote_src: yes
       line: 'nameserver {{dns_server}}'
+      gather_factx: no
       port: '{{htt_port}}'
       register: result
     - debug:
         var: result
+        var: ansible_facts
+        
         
       
 # the command run with parameter
