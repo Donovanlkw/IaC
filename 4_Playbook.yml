@@ -1,23 +1,30 @@
 ---
 -
-  name: this is a testing sample script
+  name: check  status of the service and email if its down
   hosts: win
   var:
     dns_server: 1.1.1.1
+
   tasks:
   - name: Copy File
-    win_copy:
-      src: C:\output.pdf
-      dest: C:\ansible_examples\
-      remote_src: yes
-      line: 'nameserver {{dns_server}}'
+    command: service httpd status
+# ask Ansible do not collect the FACT data from server.
       gather_factx: no
-      port: '{{htt_port}}'
-      register: result
-    - debug:
-        var: result
-        var: ansible_facts
-        
+# this is output
+    register: result
+  -mail:
+    to: hello@abc.com
+    subject: ccc
+    body: httpd service is dwown
+    when: result.stdout.find('down') !=-1
+    # return the result and the FACTS
+  - debug:
+   var: result
+   var: ansible_facts
+   line: 'nameserver {{dns_server}}'
+   port: '{{htt_port}}'
+      
+   loop: "{{}}"     
         
       
 # the command run with parameter
