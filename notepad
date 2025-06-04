@@ -1,0 +1,47 @@
+
+⸻
+
+🖥️ KB Article: App/Window Sharing Missing in Microsoft Teams (VDI via Thin Client or CWA for Linux)
+
+📌 Issue
+
+When connecting to a Virtual Desktop via Thin Client or Citrix Workspace App (CWA) for Linux, the App and Window sharing options in Microsoft Teams are missing. Only Screen sharing is available.
+
+🎯 Affected Users
+	•	Users accessing VDI through Thin Clients (Linux-based)
+	•	Users using Citrix Workspace App for Linux
+	•	Microsoft Teams running in VDI optimized mode
+
+⸻
+
+🔍 Cause
+
+This limitation is typically due to a missing or disabled Citrix policy, specifically the Graphics > Screen Drag Policy.
+
+Without this policy enabled, Microsoft Teams running in a Citrix-optimized VDI session cannot present App/Window sharing functionality.
+
+⸻
+
+🧪 Workaround (Temporary)
+
+Users can continue to share their entire screen as a temporary workaround:
+	1.	Start or join a Teams meeting.
+	2.	Click Share.
+	3.	Select Screen (not Window or App).
+
+⚠️ Note: All open apps and windows will be visible during screen sharing.
+
+⸻
+
+✅ Resolution Path (Permanent Fix)
+
+To request the required configuration change, users must send an email to the support team. IT will evaluate and apply the necessary Citrix Graphics Screen Drag Policy.
+
+⸻
+
+✉️ Email Request Template
+
+Send To: [support@example.com]
+Subject: Request to Enable Graphics Screen Drag Policy for Teams App/Window Sharing
+
+Body:
