@@ -1,4 +1,4 @@
-
+Hey
 ⸻
 
 🖥️ KB Article: App/Window Sharing Missing in Microsoft Teams (VDI via Thin Client or CWA for Linux)
@@ -45,3 +45,38 @@ Send To: [support@example.com]
 Subject: Request to Enable Graphics Screen Drag Policy for Teams App/Window Sharing
 
 Body:
+Hello,
+
+I am unable to use App or Window sharing in Microsoft Teams while connected to VDI via Thin Client (CWA for Linux). I would like to request that the required Citrix policy be enabled to restore this functionality.
+
+Please find my system details below:
+
+- Full Name:
+- Department:
+- Thin Client Model and OS:
+- Citrix Workspace App Version:
+- VDI Platform (e.g., Citrix Virtual Apps & Desktops):
+- Teams Version (if known):
+- Screenshot of Share options (optional):
+
+I understand this may require enabling the Citrix "Graphics > Screen Drag Policy."
+
+Thank you,  
+[Your Name]
+
+
+
+Internal IT Notes (for Support Team)
+	•	Confirm Teams is running in Citrix VDI optimized mode.
+	•	Check if the “Graphics > Screen Drag Policy” is applied to the affected delivery group or user policy.
+	•	Policy Path in Citrix Studio:
+HDX Policy > Graphics > Screen Drag Policy → Set to Allowed
+	•	A reboot or logoff may be required after applying the policy.
+	•	Verify CWA for Linux is updated to a compatible version (23.08 or newer recommended).
+
+⸻
+
+Let me know if you’d like a version of this KB tailored for a specific audience (end users vs. IT admins) or formatted for your internal documentation system.
+
+
+
